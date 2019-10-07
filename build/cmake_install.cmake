@@ -127,6 +127,9 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/ubuntu/Svetlana-rtech/build/gtest/cmake_install.cmake")
   include("/home/ubuntu/Svetlana-rtech/build/beginner_tutorials/cmake_install.cmake")
+  include("/home/ubuntu/Svetlana-rtech/build/my_r2d2/cmake_install.cmake")
+  include("/home/ubuntu/Svetlana-rtech/build/joint_state_publisher/joint_state_publisher/cmake_install.cmake")
+  include("/home/ubuntu/Svetlana-rtech/build/r2d2_navigator/cmake_install.cmake")
 
 endif()
 

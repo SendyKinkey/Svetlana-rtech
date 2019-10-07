@@ -6,3 +6,6 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
 subdirs(beginner_tutorials)
+subdirs(my_r2d2)
+subdirs(joint_state_publisher/joint_state_publisher)
+subdirs(r2d2_navigator)

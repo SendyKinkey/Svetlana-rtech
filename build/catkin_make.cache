@@ -1,2 +1,2 @@
-beginner_tutorials
+beginner_tutorials:joint_state_publisher/joint_state_publisher:my_r2d2:r2d2_navigator
 -DCATKIN_DEVEL_PREFIX=/home/ubuntu/Svetlana-rtech/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/Svetlana-rtech/install -G Unix Makefiles
