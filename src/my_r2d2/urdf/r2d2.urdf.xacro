@@ -14,7 +14,7 @@
   </material>
 
   <material name="black">
-    <color rgba="0 0 0 1"/>
+    <color rgba="0.0039 0 0.078 1"/>
   </material>
 
   <material name="white">
@@ -263,8 +263,17 @@
   </link>
 
   <joint name="move" type="fixed">
-  <parent link="base_footprint"/>
-  <child link="base_link"/>
-  <origin xyz="0 0 0.435"/>
-</joint>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.435"/>
+  </joint>
+
+  <link name="eye">
+  </link>
+
+  <joint name="eye_with_lense" type="fixed">
+    <parent link="lense"/>
+    <child link="eye"/>
+    <origin xyz="0 0 0" rpy="-${pi/2} 0 -${pi/2}"/>
+  </joint>
 </robot>
