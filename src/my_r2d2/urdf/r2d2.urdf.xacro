@@ -10,7 +10,7 @@
   <xacro:property name="pi" value="3.1415" />
 
   <material name="blue">
-    <color rgba="0.043 0.243 0.898 1"/>
+    <color rgba="0 0.4667 1 1"/>
   </material>
 
   <material name="black">

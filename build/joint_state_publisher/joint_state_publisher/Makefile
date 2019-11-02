@@ -66,17 +66,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -133,6 +122,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/ubuntu/Svetlana-rtech/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Svetlana-rtech/build/CMakeFiles /home/ubuntu/Svetlana-rtech/build/joint_state_publisher/joint_state_publisher/CMakeFiles/progress.marks
@@ -164,6 +164,21 @@ preinstall/fast:
 depend:
 	cd /home/ubuntu/Svetlana-rtech/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/rule:
+	cd /home/ubuntu/Svetlana-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/rule
+.PHONY : joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/rule
+
+# Convenience name for target.
+run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch: joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/rule
+
+.PHONY : run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch
+
+# fast build rule for target.
+run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch/fast:
+	cd /home/ubuntu/Svetlana-rtech/build && $(MAKE) -f joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/build.make joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/build
+.PHONY : run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch/fast
 
 # Convenience name for target.
 joint_state_publisher/joint_state_publisher/CMakeFiles/_run_tests_joint_state_publisher_rostest_test_test_mimic_cycle.launch.dir/rule:
@@ -286,21 +301,6 @@ _run_tests_joint_state_publisher_rostest_test_test_multi_joints_urdf.launch/fast
 .PHONY : _run_tests_joint_state_publisher_rostest_test_test_multi_joints_urdf.launch/fast
 
 # Convenience name for target.
-joint_state_publisher/joint_state_publisher/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/ubuntu/Svetlana-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 joint_state_publisher/joint_state_publisher/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : joint_state_publisher/joint_state_publisher/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: joint_state_publisher/joint_state_publisher/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
-
-# fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/ubuntu/Svetlana-rtech/build && $(MAKE) -f joint_state_publisher/joint_state_publisher/CMakeFiles/_catkin_empty_exported_target.dir/build.make joint_state_publisher/joint_state_publisher/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
-
-# Convenience name for target.
 joint_state_publisher/joint_state_publisher/CMakeFiles/clean_test_results_joint_state_publisher.dir/rule:
 	cd /home/ubuntu/Svetlana-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 joint_state_publisher/joint_state_publisher/CMakeFiles/clean_test_results_joint_state_publisher.dir/rule
 .PHONY : joint_state_publisher/joint_state_publisher/CMakeFiles/clean_test_results_joint_state_publisher.dir/rule
@@ -329,21 +329,6 @@ _run_tests_joint_state_publisher: joint_state_publisher/joint_state_publisher/CM
 _run_tests_joint_state_publisher/fast:
 	cd /home/ubuntu/Svetlana-rtech/build && $(MAKE) -f joint_state_publisher/joint_state_publisher/CMakeFiles/_run_tests_joint_state_publisher.dir/build.make joint_state_publisher/joint_state_publisher/CMakeFiles/_run_tests_joint_state_publisher.dir/build
 .PHONY : _run_tests_joint_state_publisher/fast
-
-# Convenience name for target.
-joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/rule:
-	cd /home/ubuntu/Svetlana-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/rule
-.PHONY : joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/rule
-
-# Convenience name for target.
-run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch: joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/rule
-
-.PHONY : run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch
-
-# fast build rule for target.
-run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch/fast:
-	cd /home/ubuntu/Svetlana-rtech/build && $(MAKE) -f joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/build.make joint_state_publisher/joint_state_publisher/CMakeFiles/run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch.dir/build
-.PHONY : run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch/fast
 
 # Convenience name for target.
 joint_state_publisher/joint_state_publisher/CMakeFiles/_run_tests_joint_state_publisher_rostest_test_test_multi_joints_collada.launch.dir/rule:
@@ -442,7 +427,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
+	@echo "... run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch"
 	@echo "... _run_tests_joint_state_publisher_rostest_test_test_mimic_cycle.launch"
 	@echo "... run_tests_joint_state_publisher_rostest"
 	@echo "... run_tests_joint_state_publisher_rostest_test_test_mimic_cycle.launch"
@@ -451,12 +436,10 @@ help:
 	@echo "... run_tests_joint_state_publisher"
 	@echo "... run_tests_joint_state_publisher_rostest_test_test_mimic_chain.launch"
 	@echo "... _run_tests_joint_state_publisher_rostest_test_test_multi_joints_urdf.launch"
-	@echo "... _catkin_empty_exported_target"
 	@echo "... install/local"
 	@echo "... clean_test_results_joint_state_publisher"
 	@echo "... _run_tests_joint_state_publisher"
 	@echo "... test"
-	@echo "... run_tests_joint_state_publisher_rostest_test_test_zero_joints.launch"
 	@echo "... _run_tests_joint_state_publisher_rostest_test_test_multi_joints_collada.launch"
 	@echo "... install"
 	@echo "... run_tests_joint_state_publisher_rostest_test_test_multi_joints_collada.launch"
@@ -466,6 +449,7 @@ help:
 	@echo "... _run_tests_joint_state_publisher_rostest_test_test_64_joint_robot.launch"
 	@echo "... install/strip"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 .PHONY : help
 
 
